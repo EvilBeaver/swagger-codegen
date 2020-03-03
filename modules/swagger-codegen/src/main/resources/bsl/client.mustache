@@ -1,0 +1,33 @@
+//////////////////////////////////////////////////////////////
+// This file is generated with swagger-codegen
+// and contains DataProcessor module for calls to {{appName}}
+//
+// Этот файл сгенерирован автоматически и содержит модуль
+// внешней обработки для вызова методов API {{appName}}
+//
+//////////////////////////////////////////////////////////////
+
+#Область ПубличныйИнтерфейс
+
+{{#operations}}
+{{#operation}}
+// {{summary}}
+// {{notes}}
+// Бросает исключение, если не удалось выполнить вызов API
+{{#hasParams}}
+// Параметры:
+{{/hasParams}}
+{{#allParams}}
+//    {{paramName}} - {{{dataType}}}. {{description}}{{^required}}. Необязательный{{/required}}
+{{/allParams}}
+// Возвращаемое значение:
+//
+//
+Функция {{operationId}}() (
+{{{{#allParams}}{{paramName}}{{^required}} = Неопределено{{/optionalMethodArgument}}{{#hasMore}}, {{/hasMore}}
+    {{/allParams}}) Экспорт
+КонецФункции
+{{/operation}}
+{{/operations}}
+
+#КонецОбласти
